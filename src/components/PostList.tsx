@@ -8,7 +8,16 @@ import { CircularProgress } from "@mui/material";
 
 const Container = styled.div`
   margin: 20px auto;
-  width: 60%;
+  width: 80%;
+`;
+
+const List = styled.div`
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
 export const PostList = () => {
@@ -42,9 +51,11 @@ export const PostList = () => {
       {loading ? (
         <CircularProgress />
       ) : (
-        posts.map((post) => (
-          <PostListItem key={post.id} title={post.title} body={post.body} />
-        ))
+        <List>
+          {posts.map((post) => (
+            <PostListItem key={post.id} title={post.title} body={post.body} />
+          ))}
+        </List>
       )}
     </Container>
   );

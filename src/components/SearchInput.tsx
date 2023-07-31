@@ -23,7 +23,14 @@ export const SearchInput = (props: SearchInputProps) => {
   };
 
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: "20px",
+      }}
+    >
       <TextField
         id="outlined-basic"
         label="Search"
@@ -31,6 +38,7 @@ export const SearchInput = (props: SearchInputProps) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
+        sx={{ width: "300px" }}
       />
       <IconButton onClick={handleClick}>
         <SearchIcon />

@@ -1,9 +1,9 @@
-import React from "react";
-import "./App.css";
-import { PostList } from "./components/PostList";
-import styled from "styled-components";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import React from "react";
+import styled from "styled-components";
+import "./App.css";
+import { PostList } from "./components/PostList";
 
 const BlogTitle = styled.h1`
   font-size: 36px;

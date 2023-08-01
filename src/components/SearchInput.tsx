@@ -1,8 +1,8 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/material";
-import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
-import { useState, KeyboardEvent } from "react";
+import TextField from "@mui/material/TextField";
+import { KeyboardEvent, useState } from "react";
 
 type SearchInputProps = {
   onSearchClick: (value: string) => void;

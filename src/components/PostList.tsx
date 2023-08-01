@@ -1,10 +1,10 @@
+import { CircularProgress } from "@mui/material";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { styled } from "styled-components";
 import { Post } from "../types/post";
 import { PostListItem } from "./PostListItem";
-import { useEffect, useState } from "react";
 import { SearchInput } from "./SearchInput";
-import { styled } from "styled-components";
-import axios from "axios";
-import { CircularProgress } from "@mui/material";
 
 const Container = styled.div`
   margin: 20px auto;
@@ -29,7 +29,7 @@ export const PostList = () => {
     try {
       setLoading(true);
 
-      const { data } = await axios.get(`http://localhost:3001/posts`, {
+      const { data } = await axios.get('http://localhost:3001/posts', {
         params: { search },
       });
 
